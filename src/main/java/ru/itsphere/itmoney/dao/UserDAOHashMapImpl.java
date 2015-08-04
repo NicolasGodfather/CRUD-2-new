@@ -16,11 +16,6 @@ import java.util.Map;
 public class UserDAOHashMapImpl implements UserDAO {
     private Map<Integer, User> store;
 
-    public UserDAOHashMapImpl(Map<Integer, User> store) {
-        super();
-        this.store = store;
-    }
-
     @Override
     public User getById(int id) {
         return store.get(id);
@@ -45,15 +40,29 @@ public class UserDAOHashMapImpl implements UserDAO {
 
     @Override
     public User update(User user) throws Exception {
-        return user;
+        User targetUser = store.get(user.getId());
+        checkUser(targetUser);
+        targetUser.setName(user.getName());
+        return targetUser;
     }
 
     @Override
     public List<User> getAll() throws Exception {
-        return new ArrayList<>();
+        return new ArrayList<>(store.values());
     }
 
     @Override
     public void deleteById(int id) throws Exception {
+        checkUser(store.remove(id));
+    }
+
+    private void checkUser(User user) {
+        if (user == null) {
+            throw new RuntimeException("The user was not found");
+        }
+    }
+
+    public void setStore(Map<Integer, User> store) {
+        this.store = store;
     }
 }

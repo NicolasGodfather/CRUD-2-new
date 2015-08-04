@@ -6,6 +6,7 @@ import org.junit.Test;
 import ru.itsphere.itmoney.domain.User;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,7 +42,9 @@ public class UserDAOHashMapImplTest {
     }
 
     private UserDAO getUserDAOHashMap(Map<Integer, User> store) {
-        return new UserDAOHashMapImpl(store);
+        UserDAOHashMapImpl userDAOHashMap = new UserDAOHashMapImpl();
+        userDAOHashMap.setStore(store);
+        return userDAOHashMap;
     }
 
     @Test
@@ -73,5 +76,57 @@ public class UserDAOHashMapImplTest {
         Assert.assertEquals("User name " + user.getName() + " != " + name, user.getName(), name);
         Assert.assertEquals("User id " + actualUser.getId() + " != " + id, actualUser.getId(), id);
         Assert.assertEquals("User name " + actualUser.getName() + " != " + name, actualUser.getName(), name);
+    }
+
+    @Test
+    public void testUpdateSuccessfully() throws Exception {
+        User originalUser = new User(USER_1_ID, USER_2_NAME);
+        User userWithChangedName = new User(originalUser.getId(), "Alex");
+        User returnedUser = userDAO.update(userWithChangedName);
+        Assert.assertNotNull("User was not updated", returnedUser);
+
+        User actualUser = store.get(originalUser.getId());
+
+        Assert.assertEquals("User id " + returnedUser.getId() + " != " + actualUser.getId(), returnedUser.getId(), actualUser.getId());
+        Assert.assertEquals("User name " + returnedUser.getName() + " != " + actualUser.getName(), returnedUser.getName(), actualUser.getName());
+
+        Assert.assertEquals("User id " + originalUser.getId() + " != " + actualUser.getId(), originalUser.getId(), actualUser.getId());
+        Assert.assertNotEquals("User name " + originalUser.getName() + " == " + actualUser.getName(), originalUser.getName(), actualUser.getName());
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testUpdateFail() throws Exception {
+        userDAO.update(new User(INEXISTENT_USER_ID, ""));
+    }
+
+    @Test
+    public void testGetAllSuccessfully() throws Exception {
+        List<User> users = userDAO.getAll();
+        Assert.assertNotNull("List is null", users);
+        Assert.assertEquals("List hasn't (" + store.size() + ") items", store.size(), users.size());
+        User actualUser = users.get(USER_2_ID);
+        Assert.assertEquals("User id " + USER_2_ID + " != " + actualUser.getId(), USER_2_ID, actualUser.getId());
+        Assert.assertEquals("User name " + USER_2_NAME + " != " + actualUser.getName(), USER_2_NAME, actualUser.getName());
+    }
+
+    @Test
+    public void testGetAllEmpty() throws Exception {
+        store.clear();
+        List<User> users = userDAO.getAll();
+        Assert.assertNotNull("List is null", users);
+        Assert.assertTrue("List isn't empty", users.isEmpty());
+    }
+
+    @Test
+    public void testDeleteByIdSuccessfully() throws Exception {
+        int id = USER_1_ID;
+        userDAO.deleteById(id);
+        User user = store.get(id);
+        Assert.assertNull("List is not null", user);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testDeleteByIdFail() throws Exception {
+        userDAO.deleteById(INEXISTENT_USER_ID);
     }
 }
