@@ -34,12 +34,19 @@ public class UserDAOTextFileImplTest {
     public static final int LAST_USER_ID = USER_2_ID;
     public static final int INEXISTENT_USER_ID = 2;
 
-    private UserDAO userDAO = new UserDAOTextFileImpl(PATH_TO_TEST_STORE);
+    private UserDAO userDAO;
 
     @Before
     public void setUp() {
         createTempDir();
         createTestTextFileAndWriteTestData();
+        userDAO = getUserDAO();
+    }
+
+    private UserDAO getUserDAO() {
+        UserDAOTextFileImpl userDAO = new UserDAOTextFileImpl(PATH_TO_TEST_STORE);
+        userDAO.setReaderFactory(new DataReaderFactory(PATH_TO_TEST_STORE));
+        return userDAO;
     }
 
     private void createTestTextFileAndWriteTestData() {

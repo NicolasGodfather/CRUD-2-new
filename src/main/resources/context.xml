@@ -47,6 +47,11 @@
 
     <bean id="userDaoTextFile" class="ru.itsphere.itmoney.dao.UserDAOTextFileImpl">
         <constructor-arg value="store/users.txt"/>
+        <property name="readerFactory" ref="dataReaderFactory"/>
+    </bean>
+
+    <bean id="dataReaderFactory" class="ru.itsphere.itmoney.dao.DataReaderFactory">
+        <constructor-arg value="store/users.txt"/>
     </bean>
 
 </beans>

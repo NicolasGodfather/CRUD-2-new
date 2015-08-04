@@ -2,9 +2,8 @@ package ru.itsphere.itmoney.dao;
 
 import ru.itsphere.itmoney.domain.User;
 
-import java.io.FileInputStream;
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
-import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -25,6 +24,8 @@ public class UserDAOTextFileImpl implements UserDAO {
     public static final String CHARSET_NAME = "UTF-8";
     public final String FILE_NAME;
 
+    private ReaderFactory readerFactory;
+
     public UserDAOTextFileImpl(String filePath) {
         FILE_NAME = filePath;
     }
@@ -38,13 +39,6 @@ public class UserDAOTextFileImpl implements UserDAO {
         return new User(getId(splittedLine), getName(splittedLine));
     }
 
-    @Override
-    public User update(User user) throws Exception {
-        List<String> lines = replaceWithNewData(user, getLinesOfFile());
-        updateFile(lines);
-        return user;
-    }
-
     private String getName(String[] splittedLine) {
         return splittedLine[1];
     }
@@ -54,9 +48,7 @@ public class UserDAOTextFileImpl implements UserDAO {
     }
 
     private String[] getSplittedLineById(int id) throws Exception {
-        try (FileInputStream fileInputStream = new FileInputStream(FILE_NAME);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, CHARSET_NAME);
-             LineNumberReader reader = new LineNumberReader(inputStreamReader)) {
+        try (LineNumberReader reader = readerFactory.getLineNumberReader()) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (reader.getLineNumber() == 1) {
@@ -70,6 +62,44 @@ public class UserDAOTextFileImpl implements UserDAO {
             }
             return null;
         }
+    }
+
+    @Override
+    public User save(User user) throws Exception {
+        String lastLine = getLastLine();
+        if (isHeader(lastLine)) {
+            return writeUserToFileEndWithNewId(user, 0);
+        } else {
+            int lastUserId = getId(lastLine.split(SEPARATOR));
+            return writeUserToFileEndWithNewId(user, lastUserId + 1);
+        }
+    }
+
+    private boolean isHeader(String line) throws Exception {
+        String firstLine = getFirstLine();
+        return line.equals(firstLine);
+    }
+
+    @Override
+    public User update(User user) throws Exception {
+        List<String> lines = replaceWithNewData(user, getLinesOfFile());
+        updateFile(lines);
+        return user;
+    }
+
+    @Override
+    public List<User> getAll() throws Exception {
+        List<User> result = new ArrayList<>();
+        ListIterator<String> iterator = getLinesOfFile().listIterator(1);
+        while (iterator.hasNext()) {
+            result.add(convertToUser(iterator.next()));
+        }
+        return result;
+    }
+
+    private User convertToUser(String userLine) {
+        String[] splittedLine = userLine.split(SEPARATOR);
+        return new User(getId(splittedLine), getName(splittedLine));
     }
 
     private void updateFile(List<String> lines) throws Exception {
@@ -96,14 +126,65 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     private List<String> getLinesOfFile() throws Exception {
         List<String> lines = new ArrayList<>();
-        try (FileInputStream fileInputStream = new FileInputStream(FILE_NAME);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, CHARSET_NAME);
-             LineNumberReader reader = new LineNumberReader(inputStreamReader)) {
+        try (BufferedReader reader = readerFactory.getLineNumberReader()) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
             }
         }
+        return lines;
+    }
+
+    private User writeUserToFileEndWithNewId(User user, int newId) throws Exception {
+        User userForSaving = prepareUserForSaving(user, newId);
+        return writeUser(userForSaving);
+    }
+
+
+    private User writeUser(User userForSaving) throws Exception {
+        boolean append = true;
+        try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
+             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
+             PrintWriter writer = new PrintWriter(outputStreamWriter);) {
+            writer.println(createNewLineForFile(userForSaving));
+        }
+        return userForSaving;
+    }
+
+    private User prepareUserForSaving(User user, int lastUserId) {
+        return new User(lastUserId, user.getName());
+    }
+
+    private String getLastLine() throws Exception {
+        try (LineNumberReader reader = readerFactory.getLineNumberReader()) {
+            String result = null;
+            String line;
+            while ((line = reader.readLine()) != null) {
+                result = line;
+            }
+            return result;
+        }
+    }
+
+    private String getFirstLine() throws Exception {
+        try (LineNumberReader reader = readerFactory.getLineNumberReader()) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                return line;
+            }
+            throw new RuntimeException("The store file is invalid");
+        }
+    }
+
+    @Override
+    public void deleteById(int id) throws Exception {
+        List<String> lines = deleteUserFromList(id, getLinesOfFile());
+        updateFile(lines);
+    }
+
+    private List<String> deleteUserFromList(int id, List<String> lines) {
+        int userIndexInFile = getUserIndexInLines(id, lines);
+        lines.remove(userIndexInFile);
         return lines;
     }
 
@@ -119,17 +200,7 @@ public class UserDAOTextFileImpl implements UserDAO {
         throw new RuntimeException("The user was not found");
     }
 
-    @Override
-    public List<User> getAll() throws Exception {
-        return new ArrayList<>();
-    }
-
-    @Override
-    public User save(User user) throws Exception {
-        return user;
-    }
-
-    @Override
-    public void deleteById(int id) throws Exception {
+    public void setReaderFactory(ReaderFactory readerFactory) {
+        this.readerFactory = readerFactory;
     }
 }
