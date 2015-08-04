@@ -1,0 +1,40 @@
+<!--
+view всех пользователей
+
+http://it-channel.ru/
+
+@author Budnikov Aleksandr
+-->
+<h1 class="text-center">All users</h1>
+</br>
+<table class="table table-hover">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in allUsers">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>
+                <a href="#/" ng-click="delete(user.id)" class="btn btn-default btn-xs">delete</a>
+                <a href="#/user/{{user.id}}" class="btn btn-default btn-xs">edit</a>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="#/addUser" class="btn btn-primary btn-sm" role="button">New user</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a href="#/user/0" class="btn btn-primary btn-xs">User id 0(Alex)</a>
+<a href="#/user/1" class="btn btn-primary btn-xs">User id 1(Bob)</a>
+<a href="#/user/2" class="btn btn-default btn-xs">User id 2</a>
+<a href="#/user/3" class="btn btn-default btn-xs">User id 3</a>
+<a href="#/user/4" class="btn btn-default btn-xs">User id 4</a>
+<a href="#/user/5" class="btn btn-default btn-xs">User id 5</a>
+<a href="#/user/6" class="btn btn-default btn-xs">User id 6</a>

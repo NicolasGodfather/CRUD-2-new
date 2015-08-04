@@ -1,0 +1,22 @@
+<!--
+Форма изменения/добавления пользователя
+
+http://it-channel.ru/
+
+@author Budnikov Aleksandr
+-->
+<h1 class="text-center">Add/Edit user</h1>
+</br>
+<form name="addUserForm" ng-show="showForm()">
+    <div class="form-group">
+        <label for="inputName">Name</label>
+        <input ng-model="user.name" ng-pattern="/^[a-zA-Z0-9а-яА-Я]*$/" type="text" class="form-control" id="inputName"
+               name="inputName" placeholder="Type name"
+               style="width: 250px" required>
+        </br>
+        <span ng-show="addUserForm.inputName.$error.pattern" class="text-danger">Not a valid name!</span>
+        <span ng-show="addUserForm.inputName.$error.required" class="text-danger">This field is required!</span>
+    </div>
+</form>
+<a href="#/" class="btn btn-default" role="button">Back</a>
+<button ng-click="save()" class="btn btn-primary" ng-disabled="!user.name || !addUserForm.$valid">Save</button>

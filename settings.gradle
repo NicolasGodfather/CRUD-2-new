@@ -1,0 +1,8 @@
+/**
+ * Конфигурация приложения
+ *
+ * http://it-channel.ru/
+ *
+ * @author Budnikov Aleksandr
+ */
+rootProject.name = 'it-money'

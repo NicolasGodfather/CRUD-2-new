@@ -1,0 +1,44 @@
+/**
+ * Скрипт сборки проекта
+ *
+ * http://it-channel.ru/
+ *
+ * @author Budnikov Aleksandr
+ */
+apply plugin: 'idea'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.1'
+    }
+}
+
+apply plugin: "com.bmuschko.tomcat"
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+// В этой части мы указываем в каком репозитории искать зависимости
+repositories {
+    // По умолчанию используем jcenter репозиторий
+    jcenter()
+}
+
+// В этой части мы указываем какие зависимости необходимы нашему проекту
+dependencies {
+    def tomcatVersion = '7.0.59'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+
+    compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'com.google.code.gson:gson:1.7.2'
+    compile 'org.apache.commons:commons-lang3:3.1'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    // Подключили junit framework
+    testCompile 'junit:junit:4.12'
+}
