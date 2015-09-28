@@ -30,7 +30,7 @@
     </bean>
 
     <bean id="userService" class="ru.itsphere.itmoney.services.UserServiceImpl">
-        <property name="userDAO" ref="userDaoTextFile"/>
+        <property name="userDAO" ref="userDaoHashMapImpl"/>
     </bean>
 
     <bean id="userController" class="ru.itsphere.itmoney.controllers.UserController">
