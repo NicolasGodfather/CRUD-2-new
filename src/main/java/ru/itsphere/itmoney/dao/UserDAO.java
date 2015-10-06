@@ -18,41 +18,34 @@ public interface UserDAO {
      *
      * @param id идентификатор
      * @return пользователь
-     * @throws Exception
      */
-    User getById(int id) throws Exception;
+    User getById(int id);
 
     /**
-     * Сохраняет нового пользователя и возвращает его же но уже с идентификатором
+     * Сохраняет нового пользователя
      *
      * @param user новый пользователь
-     * @return тот же пользователь но уже с айди
-     * @throws Exception
      */
-    User save(User user) throws Exception;
+    void save(User user);
 
     /**
      * Обновление данных о пользователе
      *
      * @param user пользователь
-     * @return тот же пользователь но уже обновленный
-     * @throws Exception - если пользователь не существует
      */
-    User update(User user) throws Exception;
+    void update(User user);
 
     /**
      * Возвращает список всех пользователей
      *
      * @return список всех пользователей
-     * @throws Exception
      */
-    List<User> getAll() throws Exception;
+    List<User> getAll();
 
     /**
      * Удаляет пользователя по идентификатору
      *
      * @param id идентификатор
-     * @throws Exception - если пользователь не существует
      */
-    void deleteById(int id) throws Exception;
+    void deleteById(int id);
 }

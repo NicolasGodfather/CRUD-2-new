@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * @author Budnikov Aleksandr
  */
-public class UserController implements Controller {
+public class UserController extends AbstractController {
     private UserService userService;
     private Map<Actions, Executable> handlers;
 
@@ -27,33 +27,55 @@ public class UserController implements Controller {
     }
 
     private Executable getById = (params) -> {
-        if (params.get("id") == null) {
-            return null;
+        try {
+            if (params.get("id") == null) {
+                return null;
+            }
+            int id = Integer.parseInt(params.get("id"));
+            User user = userService.getById(id);
+            return wrap(user);
+        } catch (Exception e) {
+            // TODO add code
         }
-        int id = Integer.parseInt(params.get("id"));
-        User user = userService.getById(id);
-        return wrap(user);
+        return null;
     };
 
     private Executable save = (params) -> {
-        User newUser = convertMapToUser(params);
-        if (params.get("id") == null) {
-            return wrap(userService.save(newUser));
-        } else {
-            return wrap(userService.update(newUser));
+        try {
+            User newUser = convertMapToUser(params);
+            if (params.get("id") == null) {
+                userService.save(newUser);
+                return wrap(newUser);
+            } else {
+                userService.update(newUser);
+                return wrap(newUser);
+            }
+        } catch (Exception e) {
+            // TODO add code
         }
+        return null;
     };
 
     private Executable getAll = (params) -> {
-        return wrap(userService.getAll());
+        try {
+            return wrap(userService.getAll());
+        } catch (Exception e) {
+            // TODO add code
+        }
+        return null;
     };
 
     private Executable deleteById = (params) -> {
-        if (params.get("id") == null) {
+        try {
+            if (params.get("id") == null) {
+                return null;
+            }
+            int id = Integer.parseInt(params.get("id"));
+            userService.deleteById(id);
             return null;
+        } catch (Exception e) {
+            // TODO add code
         }
-        int id = Integer.parseInt(params.get("id"));
-        userService.deleteById(id);
         return null;
     };
 

@@ -34,4 +34,13 @@ public class ClientRequest {
     public Map<String, String> getParams() {
         return params;
     }
+
+    @Override
+    public String toString() {
+        return "ClientRequest{" +
+                "action='" + action + '\'' +
+                ", controller='" + controller + '\'' +
+                ", params=" + params +
+                '}';
+    }
 }

@@ -1,7 +1,7 @@
 package ru.itsphere.itmoney.servlets;
 
 import com.google.gson.Gson;
-import ru.itsphere.itmoney.controllers.Controller;
+import ru.itsphere.itmoney.controllers.AbstractController;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +30,7 @@ public class DispatcherServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         try {
             ClientRequest clientRequest = getClientRequest(request);
-            Controller controller = controllerResolver.getController(clientRequest);
+            AbstractController controller = controllerResolver.getController(clientRequest);
             String serverResponse = controller.handleRequest(clientRequest);
             response.setCharacterEncoding(CHARSET_NAME);
             response.getWriter().println(serverResponse);

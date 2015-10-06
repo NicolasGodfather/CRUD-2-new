@@ -17,7 +17,6 @@ public interface Executable {
      *
      * @param params параметры
      * @return сериализуемый результат
-     * @throws Exception
      */
-    Serializable execute(Map<String, String> params) throws Exception;
+    Serializable execute(Map<String, String> params);
 }

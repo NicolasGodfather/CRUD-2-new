@@ -3,9 +3,7 @@ package ru.itsphere.itmoney.dao;
 import ru.itsphere.itmoney.domain.User;
 
 import java.io.BufferedReader;
-import java.io.FileOutputStream;
 import java.io.LineNumberReader;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,22 +19,21 @@ import java.util.ListIterator;
 public class UserDAOTextFileImpl implements UserDAO {
 
     public static final String SEPARATOR = "/";
-    public static final String CHARSET_NAME = "UTF-8";
-    public final String FILE_NAME;
-
     private ReaderFactory readerFactory;
-
-    public UserDAOTextFileImpl(String filePath) {
-        FILE_NAME = filePath;
-    }
+    private WriterFactory writerFactory;
 
     @Override
-    public User getById(int id) throws Exception {
-        String[] splittedLine = getSplittedLineById(id);
-        if (splittedLine == null) {
-            return null;
+    public User getById(int id) {
+        try {
+            String[] splittedLine = getSplittedLineById(id);
+            if (splittedLine == null) {
+                return null;
+            }
+            return new User(getId(splittedLine), getName(splittedLine));
+        } catch (Exception e) {
+            // TODO add code
         }
-        return new User(getId(splittedLine), getName(splittedLine));
+        return null;
     }
 
     private String getName(String[] splittedLine) {
@@ -65,13 +62,17 @@ public class UserDAOTextFileImpl implements UserDAO {
     }
 
     @Override
-    public User save(User user) throws Exception {
-        String lastLine = getLastLine();
-        if (isHeader(lastLine)) {
-            return writeUserToFileEndWithNewId(user, 0);
-        } else {
-            int lastUserId = getId(lastLine.split(SEPARATOR));
-            return writeUserToFileEndWithNewId(user, lastUserId + 1);
+    public void save(User user) {
+        try {
+            String lastLine = getLastLine();
+            if (isHeader(lastLine)) {
+                writeUserToFileEndWithNewId(user, 0);
+            } else {
+                int lastUserId = getId(lastLine.split(SEPARATOR));
+                writeUserToFileEndWithNewId(user, lastUserId + 1);
+            }
+        } catch (Exception e) {
+            // TODO add code
         }
     }
 
@@ -81,20 +82,28 @@ public class UserDAOTextFileImpl implements UserDAO {
     }
 
     @Override
-    public User update(User user) throws Exception {
-        List<String> lines = replaceWithNewData(user, getLinesOfFile());
-        updateFile(lines);
-        return user;
+    public void update(User user) {
+        try {
+            List<String> lines = replaceWithNewData(user, getLinesOfFile());
+            updateFile(lines);
+        } catch (Exception e) {
+            // TODO add code
+        }
     }
 
     @Override
-    public List<User> getAll() throws Exception {
-        List<User> result = new ArrayList<>();
-        ListIterator<String> iterator = getLinesOfFile().listIterator(1);
-        while (iterator.hasNext()) {
-            result.add(convertToUser(iterator.next()));
+    public List<User> getAll() {
+        try {
+            List<User> result = new ArrayList<>();
+            ListIterator<String> iterator = getLinesOfFile().listIterator(1);
+            while (iterator.hasNext()) {
+                result.add(convertToUser(iterator.next()));
+            }
+            return result;
+        } catch (Exception e) {
+            // TODO add code
         }
-        return result;
+        return null;
     }
 
     private User convertToUser(String userLine) {
@@ -104,9 +113,7 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     private void updateFile(List<String> lines) throws Exception {
         boolean append = false;
-        try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
-             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
-             PrintWriter writer = new PrintWriter(outputStreamWriter);) {
+        try (PrintWriter writer = writerFactory.getPrintWriter(append)) {
             lines.forEach(line -> {
                 writer.println(line);
             });
@@ -135,20 +142,17 @@ public class UserDAOTextFileImpl implements UserDAO {
         return lines;
     }
 
-    private User writeUserToFileEndWithNewId(User user, int newId) throws Exception {
+    private void writeUserToFileEndWithNewId(User user, int newId) throws Exception {
         User userForSaving = prepareUserForSaving(user, newId);
-        return writeUser(userForSaving);
+        writeUser(userForSaving);
     }
 
 
-    private User writeUser(User userForSaving) throws Exception {
+    private void writeUser(User userForSaving) throws Exception {
         boolean append = true;
-        try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
-             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
-             PrintWriter writer = new PrintWriter(outputStreamWriter);) {
+        try (PrintWriter writer = writerFactory.getPrintWriter(append)) {
             writer.println(createNewLineForFile(userForSaving));
         }
-        return userForSaving;
     }
 
     private User prepareUserForSaving(User user, int lastUserId) {
@@ -177,9 +181,13 @@ public class UserDAOTextFileImpl implements UserDAO {
     }
 
     @Override
-    public void deleteById(int id) throws Exception {
-        List<String> lines = deleteUserFromList(id, getLinesOfFile());
-        updateFile(lines);
+    public void deleteById(int id) {
+        try {
+            List<String> lines = deleteUserFromList(id, getLinesOfFile());
+            updateFile(lines);
+        } catch (Exception e) {
+            // TODO add code
+        }
     }
 
     private List<String> deleteUserFromList(int id, List<String> lines) {
@@ -202,5 +210,9 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     public void setReaderFactory(ReaderFactory readerFactory) {
         this.readerFactory = readerFactory;
+    }
+
+    public void setWriterFactory(WriterFactory writerFactory) {
+        this.writerFactory = writerFactory;
     }
 }

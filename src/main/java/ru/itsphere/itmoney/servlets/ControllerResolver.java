@@ -1,6 +1,6 @@
 package ru.itsphere.itmoney.servlets;
 
-import ru.itsphere.itmoney.controllers.Controller;
+import ru.itsphere.itmoney.controllers.AbstractController;
 import ru.itsphere.itmoney.controllers.Controllers;
 import ru.itsphere.itmoney.controllers.UserController;
 
@@ -17,8 +17,8 @@ public class ControllerResolver {
 
     private Map<Controllers, UserController> controllers;
 
-    public Controller getController(ClientRequest clientRequest) {
-        Controller controller = controllers.get(clientRequest.getController());
+    public AbstractController getController(ClientRequest clientRequest) {
+        AbstractController controller = controllers.get(clientRequest.getController());
         if (controller == null) {
             throw new RuntimeException("Controller '" + clientRequest.getController() + "' wasn't registered");
         }

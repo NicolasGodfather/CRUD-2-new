@@ -2,16 +2,17 @@ package ru.itsphere.itmoney.controllers;
 
 import ru.itsphere.itmoney.servlets.ClientRequest;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
- * Все контроллеры должны реализовывать этот интерфейс
+ * Все контроллеры должны расширять этот класс
  * <p>
  * http://it-channel.ru/
  *
  * @author Budnikov Aleksandr
  */
-public interface Controller {
+public abstract class AbstractController {
     
     /**
      * Находит правильный обработчик и выполняет запрос
@@ -20,9 +21,14 @@ public interface Controller {
      * @param clientRequest запрос клиента
      * @return сериализуемый результат выполнения запроса
      */
-    default String handleRequest(ClientRequest clientRequest) {
-        Executable handler = getHandlers().get(clientRequest.getAction());
-        return new ResponseCreator(handler).process(clientRequest.getParams());
+    public String handleRequest(ClientRequest clientRequest) {
+        try {
+            Executable handler = getHandlers().get(clientRequest.getAction());
+            Serializable result = handler.execute(clientRequest.getParams());
+            return ResponseCreator.process(result);
+        } catch (Exception e) {
+            return ResponseCreator.processError(e);
+        }
     }
 
     /**
@@ -30,5 +36,5 @@ public interface Controller {
      *
      * @return все доступные обработчики
      */
-    Map<Actions, Executable> getHandlers();
+    protected abstract Map<Actions, Executable> getHandlers();
 }

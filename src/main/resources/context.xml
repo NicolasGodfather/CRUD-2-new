@@ -10,25 +10,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alex" class="ru.itsphere.itmoney.domain.User">
-        <constructor-arg name="id" value="0"/>
-        <constructor-arg name="name" value="Alex"/>
-    </bean>
-
-    <bean id="bob" class="ru.itsphere.itmoney.domain.User">
-        <constructor-arg name="id" value="1"/>
-        <constructor-arg name="name" value="Bob"/>
-    </bean>
-
-    <bean id="userDaoHashMapImpl" class="ru.itsphere.itmoney.dao.UserDAOHashMapImpl">
-        <property name="store">
-            <map>
-                <entry key="0" value-ref="alex"/>
-                <entry key="1" value-ref="bob"/>
-            </map>
-        </property>
-    </bean>
-
     <bean id="userService" class="ru.itsphere.itmoney.services.UserServiceImpl">
         <property name="userDAO" ref="userDaoTextFile"/>
     </bean>
@@ -46,12 +27,15 @@
     </bean>
 
     <bean id="userDaoTextFile" class="ru.itsphere.itmoney.dao.UserDAOTextFileImpl">
-        <constructor-arg value="store/users.txt"/>
         <property name="readerFactory" ref="dataReaderFactory"/>
+        <property name="writerFactory" ref="dataWriterFactory"/>
+    </bean>
+
+    <bean id="dataWriterFactory" class="ru.itsphere.itmoney.dao.DataWriterFactory">
+        <constructor-arg value="store/users.txt"/>
     </bean>
 
     <bean id="dataReaderFactory" class="ru.itsphere.itmoney.dao.DataReaderFactory">
         <constructor-arg value="store/users.txt"/>
     </bean>
-
 </beans>

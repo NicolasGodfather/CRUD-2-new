@@ -15,28 +15,50 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
-    public User getById(int id) throws Exception {
-        return userDAO.getById(id);
+    public User getById(int id) {
+        try {
+            return userDAO.getById(id);
+        } catch (Exception e) {
+            // TODO add code
+        }
+        return null;
     }
 
     @Override
-    public User save(User user) throws Exception {
-        return userDAO.save(user);
+    public void save(User user) {
+        try {
+            userDAO.save(user);
+        } catch (Exception e) {
+            // TODO add code
+        }
     }
 
     @Override
-    public User update(User user) throws Exception {
-        return userDAO.update(user);
+    public void update(User user) {
+        try {
+            userDAO.update(user);
+        } catch (Exception e) {
+            // TODO add code
+        }
     }
 
     @Override
-    public List<User> getAll() throws Exception {
-        return userDAO.getAll();
+    public List<User> getAll() {
+        try {
+            return userDAO.getAll();
+        } catch (Exception e) {
+            // TODO add code
+        }
+        return null;
     }
 
     @Override
-    public void deleteById(int id) throws Exception {
-        userDAO.deleteById(id);
+    public void deleteById(int id) {
+        try {
+            userDAO.deleteById(id);
+        } catch (Exception e) {
+            // TODO add code
+        }
     }
 
     public void setUserDAO(UserDAO userDAO) {

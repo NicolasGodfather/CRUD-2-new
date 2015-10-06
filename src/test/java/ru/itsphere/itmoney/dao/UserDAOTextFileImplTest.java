@@ -1,14 +1,12 @@
 package ru.itsphere.itmoney.dao;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import ru.itsphere.itmoney.domain.User;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Тесты для UserDAOTextFileImpl
@@ -18,9 +16,6 @@ import java.io.PrintWriter;
  * @author Budnikov Aleksandr
  */
 public class UserDAOTextFileImplTest {
-    public static final String TEMP_DIR_PATH = "temp";
-    public static final String PATH_TO_TEST_STORE = TEMP_DIR_PATH + "/testStore.txt";
-
     public static final String SEPARATOR = UserDAOTextFileImpl.SEPARATOR;
 
     public static final String USER_ID_TITLE = "userId";
@@ -35,50 +30,33 @@ public class UserDAOTextFileImplTest {
     public static final int INEXISTENT_USER_ID = 2;
 
     private UserDAO userDAO;
+    private List<String> lines;
 
     @Before
     public void setUp() {
-        createTempDir();
-        createTestTextFileAndWriteTestData();
-        userDAO = getUserDAO();
+        lines = getLines();
+        userDAO = getUserDAOTextFile(lines);
     }
 
-    private UserDAO getUserDAO() {
-        UserDAOTextFileImpl userDAO = new UserDAOTextFileImpl(PATH_TO_TEST_STORE);
-        userDAO.setReaderFactory(new DataReaderFactory(PATH_TO_TEST_STORE));
-        return userDAO;
+    private UserDAO getUserDAOTextFile(List<String> lines) {
+        ReaderFactory readerFactory = new MockDataReaderFactory(lines);
+        WriterFactory writerFactory = new MockDataWriterFactory(lines);
+        UserDAOTextFileImpl userDAOTextFile = new UserDAOTextFileImpl();
+        userDAOTextFile.setReaderFactory(readerFactory);
+        userDAOTextFile.setWriterFactory(writerFactory);
+        return userDAOTextFile;
     }
 
-    private void createTestTextFileAndWriteTestData() {
-        try (PrintWriter writer = new PrintWriter(PATH_TO_TEST_STORE)) {
-            writer.println(USER_ID_TITLE + SEPARATOR + USER_NAME_TITLE);
-            writer.println(USER_1_ID + SEPARATOR + USER_1_NAME);
-            writer.println(USER_2_ID + SEPARATOR + USER_2_NAME);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void createTempDir() {
-        new File(TEMP_DIR_PATH).mkdir();
-    }
-
-    @After
-    public void tearDown() {
-        deleteTestTextFile();
-        deleteTempDir();
-    }
-
-    private void deleteTempDir() {
-        new File(TEMP_DIR_PATH).delete();
-    }
-
-    private void deleteTestTextFile() {
-        new File(PATH_TO_TEST_STORE).delete();
+    private List<String> getLines() {
+        List<String> lines = new ArrayList<>();
+        lines.add(USER_ID_TITLE + SEPARATOR + USER_NAME_TITLE);
+        lines.add(USER_1_ID + SEPARATOR + USER_1_NAME);
+        lines.add(USER_2_ID + SEPARATOR + USER_2_NAME);
+        return lines;
     }
 
     @Test
-    public void testGetByIdExistedUser() throws Exception {
+    public void testGetByIdExistedUser() {
         int id = USER_1_ID;
         String name = USER_1_NAME;
         User user = userDAO.getById(id);
@@ -88,27 +66,69 @@ public class UserDAOTextFileImplTest {
     }
 
     @Test
-    public void testGetByIdNotExistedUser() throws Exception {
+    public void testGetByIdNotExistedUser() {
         int id = INEXISTENT_USER_ID;
         User user = userDAO.getById(id);
         Assert.assertNull("User with id " + id + " is not null", user);
     }
 
     @Test
-    public void testUpdateSuccessfully() throws Exception {
-        User originalUser = userDAO.getById(USER_1_ID);
-        String newName = "Alex";
-        userDAO.update(new User(originalUser.getId(), newName));
-        User updatedUser = userDAO.getById(USER_1_ID);
-        Assert.assertNotNull("User was not updated", updatedUser);
-        Assert.assertEquals("Saved user id " + updatedUser.getId() + " != " + originalUser.getId(), updatedUser.getId(), originalUser.getId());
-        Assert.assertEquals("Saved user name " + updatedUser.getName() + " != " + newName, updatedUser.getName(), newName);
-        Assert.assertNotEquals("Saved user name " + updatedUser.getName() + " == " + originalUser.getName(), updatedUser.getName(), originalUser.getName());
+    public void testSaveSuccessfully() {
+        String name = "Саша";
+        int id = 2;
+        userDAO.save(new User(name));
+        String expected1 = id + SEPARATOR + name;
+        String actual = lines.get(lines.size() - 1);
+        Assert.assertEquals(expected1 + "!=" + actual, expected1, actual);
     }
 
-    @Test(expected = RuntimeException.class)
-    public void testUpdateFail() throws Exception {
+    @Test
+    public void testUpdateSuccessfully() {
+        User originalUser = new User(USER_1_ID, USER_2_NAME);
+        User userWithChangedName = new User(originalUser.getId(), "Alex");
+        userDAO.update(userWithChangedName);
+        String actual = lines.get(USER_1_ID + 1);
+        String unexpected = originalUser.getId() + SEPARATOR + originalUser.getName();
+        Assert.assertNotEquals(unexpected + "==" + actual, unexpected, actual);
+    }
+
+    @Test
+    public void testUpdateFail() {
         userDAO.update(new User(INEXISTENT_USER_ID, ""));
+    }
+
+    @Test
+    public void testGetAllSuccessfully() {
+        List<User> users = userDAO.getAll();
+        Assert.assertNotNull("List is null", users);
+        Assert.assertEquals("List hasn't (lines.size() - 1) items", lines.size() - 1, users.size());
+        User user = users.get(USER_2_ID);
+        String actual = user.getId() + SEPARATOR + user.getName();
+        String expected = USER_2_ID + SEPARATOR + USER_2_NAME;
+        Assert.assertEquals(expected + "!=" + actual, expected, actual);
+    }
+
+    @Test
+    public void testGetAllEmpty() {
+        lines.remove(1);
+        lines.remove(1);
+        List<User> users = userDAO.getAll();
+        Assert.assertNotNull("List is null", users);
+        Assert.assertTrue("List isn't empty", users.isEmpty());
+    }
+
+    @Test
+    public void testDeleteByIdSuccessfully() {
+        int id = USER_1_ID;
+        userDAO.deleteById(id);
+        String expected = USER_2_ID + SEPARATOR + USER_2_NAME;
+        String actual = lines.get(USER_1_ID + 1);
+        Assert.assertEquals(expected + "!=" + actual, expected, actual);
+    }
+
+    @Test
+    public void testDeleteByIdFail() {
+        userDAO.deleteById(INEXISTENT_USER_ID);
     }
 
     /**
