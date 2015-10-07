@@ -1,5 +1,7 @@
 package ru.itsphere.itmoney.dao;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.itsphere.itmoney.domain.User;
 
 import java.io.BufferedReader;
@@ -17,6 +19,10 @@ import java.util.ListIterator;
  * @author Budnikov Aleksandr
  */
 public class UserDAOTextFileImpl implements UserDAO {
+    /**
+     * Подключили логгер к текущему классу
+     */
+    private static final Logger logger = LogManager.getLogger(UserDAOTextFileImpl.class);
 
     public static final String SEPARATOR = "/";
     private ReaderFactory readerFactory;
@@ -27,13 +33,13 @@ public class UserDAOTextFileImpl implements UserDAO {
         try {
             String[] splittedLine = getSplittedLineById(id);
             if (splittedLine == null) {
+                logger.warn("User with id '{}' was not found", id);
                 return null;
             }
             return new User(getId(splittedLine), getName(splittedLine));
         } catch (Exception e) {
-            // TODO add code
+            throw new DAOException(String.format("Getting user by id %s", id), e);
         }
-        return null;
     }
 
     private String getName(String[] splittedLine) {

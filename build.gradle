@@ -40,6 +40,9 @@ dependencies {
     compile 'org.apache.commons:commons-lang3:3.1'
     // Подключили один из модулей spring framework
     compile 'org.springframework:spring-web:4.1.6.RELEASE'
+    // Добавили зависимости от log4j2
+    compile 'org.apache.logging.log4j:log4j-api:2.4'
+    compile 'org.apache.logging.log4j:log4j-core:2.4'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     // Подключили junit framework
     testCompile 'junit:junit:4.12'

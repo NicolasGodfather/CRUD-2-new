@@ -1,7 +1,10 @@
 package ru.itsphere.itmoney.controllers;
 
 import com.google.gson.Gson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.itsphere.itmoney.domain.User;
+import ru.itsphere.itmoney.services.ServiceException;
 import ru.itsphere.itmoney.services.UserService;
 
 import java.util.HashMap;
@@ -15,6 +18,11 @@ import java.util.Map;
  * @author Budnikov Aleksandr
  */
 public class UserController extends AbstractController {
+    /**
+     * Подключили логгер к текущему классу
+     */
+    private static final Logger logger = LogManager.getLogger(UserController.class);
+
     private UserService userService;
     private Map<Actions, Executable> handlers;
 
@@ -29,15 +37,15 @@ public class UserController extends AbstractController {
     private Executable getById = (params) -> {
         try {
             if (params.get("id") == null) {
+                logger.warn("Action {} incoming param id is null", Actions.GET_BY_ID);
                 return null;
             }
             int id = Integer.parseInt(params.get("id"));
             User user = userService.getById(id);
             return wrap(user);
-        } catch (Exception e) {
-            // TODO add code
+        } catch (ServiceException e) {
+            throw new ApplicationException(String.format("Action getById with params (%s) has thrown an exception", params), e);
         }
-        return null;
     };
 
     private Executable save = (params) -> {

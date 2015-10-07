@@ -1,5 +1,8 @@
 package ru.itsphere.itmoney.services;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ru.itsphere.itmoney.dao.DAOException;
 import ru.itsphere.itmoney.dao.UserDAO;
 import ru.itsphere.itmoney.domain.User;
 
@@ -13,15 +16,19 @@ import java.util.List;
  * @author Budnikov Aleksandr
  */
 public class UserServiceImpl implements UserService {
+    /**
+     * Подключили логгер к текущему классу
+     */
+    private static final Logger logger = LogManager.getLogger(UserServiceImpl.class);
+
     private UserDAO userDAO;
 
     public User getById(int id) {
         try {
             return userDAO.getById(id);
-        } catch (Exception e) {
-            // TODO add code
+        } catch (DAOException e) {
+            throw new ServiceException(String.format("Getting user by id %s", id), e);
         }
-        return null;
     }
 
     @Override
