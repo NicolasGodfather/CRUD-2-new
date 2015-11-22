@@ -21,7 +21,7 @@ public class ControllerResolver {
      */
     private static final Logger logger = LogManager.getLogger(ControllerResolver.class);
 
-    private Map<Controllers, UserController> controllers;
+    private Map<Controllers, AbstractController> controllers;
 
     public AbstractController getController(ClientRequest clientRequest) {
         AbstractController controller = controllers.get(clientRequest.getController());
@@ -32,7 +32,7 @@ public class ControllerResolver {
         return controller;
     }
 
-    public void setControllers(Map<Controllers, UserController> controllers) {
+    public void setControllers(Map<Controllers, AbstractController> controllers) {
         this.controllers = controllers;
     }
 }
