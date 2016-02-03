@@ -77,9 +77,7 @@ public class UserDAOTextFileImpl implements UserDAO {
         try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
              OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
              PrintWriter writer = new PrintWriter(outputStreamWriter);) {
-            lines.forEach(line -> {
-                writer.println(line);
-            });
+            lines.forEach(writer::println);
         }
     }
 
