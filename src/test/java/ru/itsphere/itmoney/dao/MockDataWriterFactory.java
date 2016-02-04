@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Budnikov Aleksandr
  */
-public class MockDataWriterFactory {
+public class MockDataWriterFactory implements WriterFactory {
 
     private final List<String> lines;
 

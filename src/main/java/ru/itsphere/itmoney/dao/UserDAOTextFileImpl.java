@@ -17,8 +17,6 @@ import java.util.ListIterator;
 public class UserDAOTextFileImpl implements UserDAO {
 
     public static final String SEPARATOR = "/";
-//    public static final String CHARSET_NAME = "UTF-8";
-    public final String FILE_NAME;
 
     private ReaderFactory readerFactory;
     private WriterFactory writerFactory;
@@ -30,10 +28,6 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     public void setWriterFactory(WriterFactory writerFactory) {
         this.writerFactory = writerFactory;
-    }
-
-    public UserDAOTextFileImpl(String filePath) {
-        FILE_NAME = filePath;
     }
 
     @Override
