@@ -46,6 +46,7 @@ public class UserDAOTextFileImplTest {
     private UserDAO getUserDAO() {
         UserDAOTextFileImpl userDAO = new UserDAOTextFileImpl(PATH_TO_TEST_STORE);
         userDAO.setReaderFactory(new DataReaderFactory(PATH_TO_TEST_STORE));
+        userDAO.setWriterFactory(new DataWriterFactory(PATH_TO_TEST_STORE));
         return userDAO;
     }
 

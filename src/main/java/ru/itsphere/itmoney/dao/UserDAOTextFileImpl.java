@@ -2,11 +2,7 @@ package ru.itsphere.itmoney.dao;
 
 import ru.itsphere.itmoney.domain.User;
 
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.LineNumberReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -21,10 +17,20 @@ import java.util.ListIterator;
 public class UserDAOTextFileImpl implements UserDAO {
 
     public static final String SEPARATOR = "/";
-    public static final String CHARSET_NAME = "UTF-8";
+//    public static final String CHARSET_NAME = "UTF-8";
     public final String FILE_NAME;
 
     private ReaderFactory readerFactory;
+    private WriterFactory writerFactory;
+
+
+    public void setReaderFactory(ReaderFactory readerFactory) {
+        this.readerFactory = readerFactory;
+    }
+
+    public void setWriterFactory(WriterFactory writerFactory) {
+        this.writerFactory = writerFactory;
+    }
 
     public UserDAOTextFileImpl(String filePath) {
         FILE_NAME = filePath;
@@ -104,12 +110,8 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     private void updateFile(List<String> lines) throws Exception {
         boolean append = false;
-        try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
-             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
-             PrintWriter writer = new PrintWriter(outputStreamWriter);) {
-            lines.forEach(line -> {
-                writer.println(line);
-            });
+        try (PrintWriter writer = writerFactory.getPrintWriter(append)) {
+            lines.forEach(writer::println);
         }
     }
 
@@ -143,9 +145,7 @@ public class UserDAOTextFileImpl implements UserDAO {
 
     private User writeUser(User userForSaving) throws Exception {
         boolean append = true;
-        try (FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, append);
-             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
-             PrintWriter writer = new PrintWriter(outputStreamWriter);) {
+        try (PrintWriter writer = writerFactory.getPrintWriter(append)) {
             writer.println(createNewLineForFile(userForSaving));
         }
         return userForSaving;
@@ -198,9 +198,5 @@ public class UserDAOTextFileImpl implements UserDAO {
             }
         }
         throw new RuntimeException("The user was not found");
-    }
-
-    public void setReaderFactory(ReaderFactory readerFactory) {
-        this.readerFactory = readerFactory;
     }
 }
