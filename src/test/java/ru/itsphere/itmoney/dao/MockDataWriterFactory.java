@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class MockDataWriterFactory implements WriterFactory {
 
+    // в этом списке будут храниться те же строки что и в файле
     private final List<String> lines;
 
     public MockDataWriterFactory(List<String> lines) {
@@ -21,13 +22,18 @@ public class MockDataWriterFactory implements WriterFactory {
     }
 
     public PrintWriter getPrintWriter(boolean append) throws Exception {
+        // если append - false, это значит что список нужно очистить и переписать заново
+        // если append - true, то список не будет очищен, а "дополнится"
         if (!append) {
             lines.clear();
         }
+        // созд. райтер - никакой смысловой нагрузки
         FileWriter fileWriter = new FileWriter(new FileDescriptor());
+        // созд и возвр потомок класса PrintWriter (анонимный класс)
         return new PrintWriter(fileWriter) {
             @Override
             public void println(String line) {
+                // записываем в список
                 lines.add(line);
             }
         };

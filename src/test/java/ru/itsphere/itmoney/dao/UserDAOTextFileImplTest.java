@@ -33,35 +33,35 @@ public class UserDAOTextFileImplTest {
     private UserDAO userDAO;
     private List<String> lines;
 
-    @Before
-    public void setUp() {
-        lines = getLines();
-        userDAO = getUserDAOTextFile(lines);
-    }
+        @Before
+        public void setUp() {
+            lines = getLines();
+            userDAO = getUserDAO(lines);
+        }
 
-    private UserDAO getUserDAOTextFile(List<String> lines) {
-        ReaderFactory readerFactory = new MockDataReaderFactory(lines);
-        WriterFactory writerFactory = new MockDataWriterFactory(lines);
-        UserDAOTextFileImpl userDAOTextFile = new UserDAOTextFileImpl();
-        userDAOTextFile.setReaderFactory(readerFactory);
-        userDAOTextFile.setWriterFactory(writerFactory);
-        return userDAOTextFile;
-    }
+        private UserDAO getUserDAO(List<String> lines) {
+            ReaderFactory readerFactory = new MockDataReaderFactory(lines);
+            WriterFactory writerFactory = new MockDataWriterFactory(lines);
+            UserDAOTextFileImpl userDAO = new UserDAOTextFileImpl();
+            userDAO.setReaderFactory(readerFactory);
+            userDAO.setWriterFactory(writerFactory);
+            return userDAO;
+        }
 
-    private List<String> getLines() {
-        List<String> lines = new ArrayList<>();
-        lines.add(USER_ID_TITLE + SEPARATOR + USER_NAME_TITLE);
-        lines.add(USER_1_ID + SEPARATOR + USER_1_NAME);
-        lines.add(USER_2_ID + SEPARATOR + USER_2_NAME);
-        return lines;
-    }
+        private List<String> getLines() {
+            List<String> lines = new ArrayList<>();
+            lines.add(USER_ID_TITLE + SEPARATOR + USER_NAME_TITLE);
+            lines.add(USER_1_ID + SEPARATOR + USER_1_NAME);
+            lines.add(USER_2_ID + SEPARATOR + USER_2_NAME);
+            return lines;
+        }
 
-    private User convertLineToUser(String line) {
-        String[] constructorArgs = line.split(SEPARATOR);
-        int id = Integer.parseInt(constructorArgs[0]);
-        String name = constructorArgs[1];
-        return new User(id, name);
-    }
+        private User convertLineToUser(String line) {
+            String[] constructorArgs = line.split(SEPARATOR);
+            int id = Integer.parseInt(constructorArgs[0]);
+            String name = constructorArgs[1];
+            return new User(id, name);
+        }
 
     @Test
     public void testGetByIdExistedUser() throws Exception {
@@ -74,8 +74,8 @@ public class UserDAOTextFileImplTest {
         String secondLineFromStore = lines.get(USER_2_ID + 1);
         User secondReturnedUser = userDAO.getById(USER_2_ID);
         Assert.assertNotNull("User with id = " + USER_2_ID + " is null", secondReturnedUser);
-        Assert.assertEquals("Method returns incorrect user", secondLineFromStore, firstReturnedUser.getId()
-                            + SEPARATOR + firstReturnedUser.getName());
+        Assert.assertEquals("Method returns incorrect user", secondLineFromStore, secondReturnedUser.getId()
+                            + SEPARATOR + secondReturnedUser.getName());
     }
 
     @Test
@@ -85,35 +85,37 @@ public class UserDAOTextFileImplTest {
         Assert.assertNull("User with id " + id + " is not null", user);
     }
 
-    @Test
-    public void testUpdateSuccessfully() throws Exception {
-        User originalUser = new User(USER_1_ID, USER_2_NAME);
-        User userWithChangeName = new User(originalUser.getId(), "Nico");
-        User returnedUser = userDAO.update(userWithChangeName);
-        // users мы получаем теперь напрямую из списка, +1 т.к. первая строка - шапка
-        String actual = lines.get(USER_1_ID + 1);
-        String expected1 = returnedUser.getId() + SEPARATOR + returnedUser.getName();
-        String unexpected = originalUser.getId() + SEPARATOR + originalUser.getName();
-
-        Assert.assertNotNull("User was not updated", returnedUser);
-        Assert.assertEquals(expected1 + "!=" + actual, expected1, actual);
-        Assert.assertNotEquals(unexpected + "==" + actual, unexpected, actual);
-    }
-
 //    @Test
 //    public void testUpdateSuccessfully() throws Exception {
-//        String originalUserLine = lines.get(USER_1_ID + 1);
-//        String newName = "Alex";
-//        String updatedUserString = lines.get(USER_1_ID + 1);
-//        User originalUser = convertLineToUser(originalUserLine);
-//        User newUser = new User(originalUser.getId(), newName);
-//        User returnedUser = userDAO.update(newUser);
-//        User updatedUser = convertLineToUser(updatedUserString);
+//        User originalUser = new User(USER_1_ID, USER_2_NAME);
+//        User userWithChangeName = new User(originalUser.getId(), "Nico");
+//        User returnedUser = userDAO.update(userWithChangeName);
+//        // users мы получаем теперь напрямую из списка, +1 т.к. первая строка - шапка
+//        String actual = lines.get(USER_1_ID + 1);
+//        String expected1 = returnedUser.getId() + SEPARATOR + returnedUser.getName();
+//        String unexpected = originalUser.getId() + SEPARATOR + originalUser.getName();
 //
-//        Assert.assertNotNull("Method returns null", returnedUser);
-//        Assert.assertEquals("Method returns incorrect user", newUser, returnedUser);
-//        Assert.assertEquals("Method not updates user", newUser, updatedUser);
+//        Assert.assertNotNull("User was not updated", returnedUser);
+//        Assert.assertEquals(expected1 + "!=" + actual, expected1, actual);
+//        Assert.assertNotEquals(unexpected + "==" + actual, unexpected, actual);
 //    }
+
+    @Test
+    public void testUpdateSuccessfully() throws Exception {
+        String actual = lines.get(USER_1_ID + 1);
+        User originalUser = convertLineToUser(actual);
+
+        String newName = "Nico";
+        User newUser = new User(originalUser.getId(), newName);
+        User returnedUser = userDAO.update(newUser);
+
+        String updatedUserString = lines.get(USER_1_ID + 1);
+        User updatedUser = convertLineToUser(updatedUserString);
+
+        Assert.assertNotNull("Method returns null", returnedUser);
+        Assert.assertEquals("Method returns incorrect user", newUser, returnedUser);
+        Assert.assertEquals("Method not updates user", newUser, updatedUser);
+    }
 
     @Test(expected = RuntimeException.class)
     public void testUpdateFail() throws Exception {
@@ -122,7 +124,7 @@ public class UserDAOTextFileImplTest {
 
     @Test
     public void testSave() throws Exception {
-        User newUser = new User(0, "Nico");
+        User newUser = new User(1, "Nico");
         User returnedUser = userDAO.save(newUser);
         User originalUser = convertLineToUser(lines.get(lines.size() - 1));
         Assert.assertNotNull("Method returns null", returnedUser);

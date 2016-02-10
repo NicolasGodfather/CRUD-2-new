@@ -7,5 +7,12 @@ import java.io.PrintWriter;
  */
 public interface WriterFactory {
 
+    // return new ready to use - PrintWriter
+    /**
+     * Возвращает новый и готовый к использованию PrintWriter
+     *
+     * @return PrintWriter
+     * @throws Exception
+     */
     PrintWriter getPrintWriter(boolean append) throws Exception;
 }

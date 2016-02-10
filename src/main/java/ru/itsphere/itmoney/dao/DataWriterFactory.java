@@ -20,6 +20,8 @@ public class DataWriterFactory implements WriterFactory {
     public PrintWriter getPrintWriter(boolean append) throws Exception {
         FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, CHARSET_NAME);
+//        fileOutputStream.close();
+//        outputStreamWriter.close();
         return new PrintWriter(outputStreamWriter);
     }
 }
