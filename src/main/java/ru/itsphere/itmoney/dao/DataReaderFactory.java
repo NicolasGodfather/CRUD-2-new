@@ -22,8 +22,6 @@ public class DataReaderFactory implements ReaderFactory {
     public LineNumberReader getLineNumberReader() throws Exception {
         FileInputStream fileInputStream = new FileInputStream(FILE_NAME);
         InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, CHARSET_NAME);
-//        fileInputStream.close();
-//        inputStreamReader.close();
         return new LineNumberReader(inputStreamReader);
     }
 }
