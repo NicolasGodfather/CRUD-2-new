@@ -92,7 +92,7 @@ public class UserDAOTextFileImplTest {
         Assert.assertNotEquals(unexpected + "==" + actual, unexpected, actual);
     }
 
-    @Test
+    @Test(expected = Exception.class)
     public void testUpdateFail() {
         userDAO.update(new User(INEXISTENT_USER_ID, ""));
     }
@@ -126,7 +126,7 @@ public class UserDAOTextFileImplTest {
         Assert.assertEquals(expected + "!=" + actual, expected, actual);
     }
 
-    @Test
+    @Test(expected = Exception.class)
     public void testDeleteByIdFail() {
         userDAO.deleteById(INEXISTENT_USER_ID);
     }

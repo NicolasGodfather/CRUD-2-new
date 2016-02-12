@@ -52,25 +52,27 @@ public class UserController extends AbstractController {
         try {
             User newUser = convertMapToUser(params);
             if (params.get("id") == null) {
+                logger.warn("Action {} incoming param id is null", Actions.SAVE); // add here
                 userService.save(newUser);
                 return wrap(newUser);
             } else {
                 userService.update(newUser);
                 return wrap(newUser);
             }
-        } catch (Exception e) {
+        } catch (ServiceException e) {
             // TODO add code
+            throw new ApplicationException(String.format("Action save with params (%s) has thrown an exception", params), e);
         }
-        return null;
     };
+
 
     private Executable getAll = (params) -> {
         try {
             return wrap(userService.getAll());
-        } catch (Exception e) {
+        } catch (ServiceException e) {
             // TODO add code
+            throw new ApplicationException("Action getAll has thrown an exception", e); // можно так
         }
-        return null;
     };
 
     private Executable deleteById = (params) -> {
@@ -81,7 +83,7 @@ public class UserController extends AbstractController {
             int id = Integer.parseInt(params.get("id"));
             userService.deleteById(id);
             return null;
-        } catch (Exception e) {
+        } catch (ServiceException e) {
             // TODO add code
         }
         return null;

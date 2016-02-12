@@ -79,6 +79,7 @@ public class UserDAOTextFileImpl implements UserDAO {
             }
         } catch (Exception e) {
             // TODO add code
+            throw new DAOException(String.format("Saving user by id %s", user.getId()), e);
         }
     }
 
@@ -94,6 +95,7 @@ public class UserDAOTextFileImpl implements UserDAO {
             updateFile(lines);
         } catch (Exception e) {
             // TODO add code
+            throw new DAOException(String.format("Updating user by %s", user.getId()), e);
         }
     }
 
@@ -108,8 +110,8 @@ public class UserDAOTextFileImpl implements UserDAO {
             return result;
         } catch (Exception e) {
             // TODO add code
+            throw new DAOException("Getting all users in list", e);
         }
-        return null;
     }
 
     private User convertToUser(String userLine) {
@@ -193,6 +195,7 @@ public class UserDAOTextFileImpl implements UserDAO {
             updateFile(lines);
         } catch (Exception e) {
             // TODO add code
+            throw new DAOException(String.format("Deleting user by id %s", id), e);
         }
     }
 
