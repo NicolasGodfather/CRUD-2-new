@@ -1,5 +1,8 @@
 package ru.itsphere.itmoney.dao;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
@@ -9,9 +12,12 @@ import java.io.LineNumberReader;
  *
  * @author Budnikov Aleksandr
  */
+@Component
 public class DataReaderFactory implements ReaderFactory {
 
     public static final String CHARSET_NAME = "UTF-8";
+
+    @Value("${data.access.file}")
     public final String FILE_NAME;
 
     public DataReaderFactory(String fileName) {

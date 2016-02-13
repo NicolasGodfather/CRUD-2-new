@@ -2,6 +2,8 @@ package ru.itsphere.itmoney.dao;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.itsphere.itmoney.domain.User;
 
 import java.io.BufferedReader;
@@ -18,6 +20,7 @@ import java.util.ListIterator;
  *
  * @author Budnikov Aleksandr
  */
+@Component
 public class UserDAOTextFileImpl implements UserDAO {
     /**
      * Подключили логгер к текущему классу
@@ -25,7 +28,9 @@ public class UserDAOTextFileImpl implements UserDAO {
     private static final Logger logger = LogManager.getLogger(UserDAOTextFileImpl.class);
 
     public static final String SEPARATOR = "/";
+    @Autowired
     private ReaderFactory readerFactory;
+    @Autowired
     private WriterFactory writerFactory;
 
     @Override

@@ -3,6 +3,8 @@ package ru.itsphere.itmoney.controllers;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import ru.itsphere.itmoney.domain.User;
 import ru.itsphere.itmoney.services.ServiceException;
 import ru.itsphere.itmoney.services.UserService;
@@ -17,12 +19,15 @@ import java.util.Map;
  *
  * @author Budnikov Aleksandr
  */
+//add
+@Controller
 public class UserController extends AbstractController {
     /**
      * Подключили логгер к текущему классу
      */
     private static final Logger logger = LogManager.getLogger(UserController.class);
-
+    //add
+    @Autowired
     private UserService userService;
     private Map<Actions, Executable> handlers;
 
