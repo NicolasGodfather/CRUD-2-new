@@ -155,7 +155,6 @@ public class UserDAOTextFileImpl implements UserDAO {
         writeUser(userForSaving);
     }
 
-
     private void writeUser(User userForSaving) throws Exception {
         boolean append = true;
         try (PrintWriter writer = writerFactory.getPrintWriter(append)) {
