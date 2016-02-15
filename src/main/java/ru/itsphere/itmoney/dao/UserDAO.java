@@ -48,4 +48,12 @@ public interface UserDAO {
      * @param id идентификатор
      */
     void deleteById(int id);
+
+    /**
+     * Находит пользователя в поисковике
+     * @param query строка запроса
+     * @return Users которые соответсвуют запросу
+     */
+    List<User> findUsersByQuery(String query);
+
 }

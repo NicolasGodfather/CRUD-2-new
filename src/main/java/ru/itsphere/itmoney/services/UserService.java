@@ -48,9 +48,18 @@ public interface UserService {
      */
     void deleteById(int id);
 
+
     /**
      * Подсчитывает всех пользователей
      *
      */
     int getCount();
+
+    /**
+     * Находит пользователя в поисковике
+     * @param query строка запроса
+     * @return Users которые соответсвуют запросу
+     */
+    List<User> findUsersByQuery(String query);
+
 }

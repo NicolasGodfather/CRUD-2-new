@@ -9,9 +9,10 @@ http://it-channel.ru/
 <h1 class="text-center">All {{usersCount}} users</h1>
 </br>
 </br>
-<div class="form-group searchText ">
+<div class="form-group searchText">
     <label for="searchControl">User search:</label>
-    <input id="searchControl" ng-model="searchText" class="form-control" placeholder="Type search text">
+    <input id="searchControl" ng-model="searchText" ng-change="filterUsers()"
+           class="form-control" placeholder="Type search text">
 </div>
 </br>
 <table class="table table-hover">
@@ -22,7 +23,7 @@ http://it-channel.ru/
     </thead>
     <tbody>
     <!--проитерирует список пользователей-->
-        <tr ng-repeat="user in allUsers | filter:searchText"> <!-- для фильтрации элементов списка allUsers-->
+        <tr ng-repeat="user in allUsers">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>

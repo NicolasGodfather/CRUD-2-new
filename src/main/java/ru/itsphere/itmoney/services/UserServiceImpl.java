@@ -83,12 +83,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public int getCount() {
         try {
-
             return userDAO.getAll().size();
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new ServiceException("Getting count of users in list", e);
         }
+    }
 
+    //add task 16
+    @Override
+    public List<User> findUsersByQuery(String query) {
+        try {
+            return userDAO.findUsersByQuery(query);
+        } catch (Exception e) {
+            throw new ServiceException(String.format("Problem in findUsersByQuery %s", query), e);
+        }
     }
 
     public void setUserDAO(UserDAO userDAO) {

@@ -38,8 +38,24 @@ public class UserController extends AbstractController {
         handlers.put(Actions.GET_ALL, getAll);
         handlers.put(Actions.DELETE_BY_ID, deleteById);
         handlers.put(Actions.GET_COUNT, getCount);
+        handlers.put(Actions.FIND_USERS_BY_QUERY, findUsersByQuery);
     }
+    // task 16
+    private Executable findUsersByQuery = (params) -> {
+        try {
+//            if (params.get("query").isEmpty()) {
+//                return null;
+//            }
+            String query = String.valueOf(params.get("query"));
+            return wrap(userService.findUsersByQuery(query));
+        } catch (ServiceException e) {
+            // TODO add code
+            throw new ApplicationException(String.format("Action findUsersByQuery with " +
+                    "params (%s) has thrown an exception", params), e);
+        }
+    };
 
+    // task 1
     private Executable getCount = (params -> {
         try {
             return wrap(userService.getCount());

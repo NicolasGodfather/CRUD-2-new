@@ -52,7 +52,17 @@ services.factory('User', function ($http, Config, ErrorHandler) {
             }).success(function (response){
                 ErrorHandler(response,successCallback);
             });
-        }
+        },
+//add 16 task
+        findUsersByQuery : function (searchText, successCallback) {
+            return $http.post(Config.appName, {
+                controller: "USER",
+                action: 'SEARCH_TEXT',
+                params: {id: id}
+            }).success(function (response) {
+                ErrorHandler(response, successCallback);
+            });
+        },
     }
 });
 

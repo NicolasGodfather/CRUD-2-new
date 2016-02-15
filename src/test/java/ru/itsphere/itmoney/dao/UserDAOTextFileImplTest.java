@@ -131,6 +131,24 @@ public class UserDAOTextFileImplTest {
         userDAO.deleteById(INEXISTENT_USER_ID);
     }
 
+    //add task 16
+    @Test
+    public void testFindUsersByQuerySuccessfully() {
+        List<User> users = userDAO.findUsersByQuery(USER_2_NAME);
+        User user = users.get(0);
+        String actual = user.getId() + SEPARATOR + user.getName();
+        String expected = USER_2_ID + SEPARATOR + USER_2_NAME;
+        Assert.assertEquals("findUsersBuQuery isn't working", expected, actual);
+
+    }
+
+    @Test
+    public void testFindUsersByQueryFail() {
+        List<User> users = userDAO.findUsersByQuery(USER_1_NAME + USER_2_NAME);
+        Assert.assertTrue("Users isn't empty", users.isEmpty());
+    }
+
+
     /**
      * Эти тест не удалять и не трогать!
      * Нужен для контроля ваших ошибок

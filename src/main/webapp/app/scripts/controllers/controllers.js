@@ -52,6 +52,7 @@ itMoneyModule.controller('AllUsersController', function ($scope, $location, User
         });
     }
 
+
     getAllUsers();
     getUsersCount();
 
@@ -59,6 +60,15 @@ itMoneyModule.controller('AllUsersController', function ($scope, $location, User
         User.delete(id, function (result) {
             getAllUsers();
             getUsersCount();
+        });
+    }
+
+//add 16 task
+    $scope.filterUsers = function () {
+        User.findUsersByQuery($scope.searchText, function (result) {
+            if (result) {
+                $scope.allUsers = angular.fromJson(result);
+            }
         });
     }
 });
