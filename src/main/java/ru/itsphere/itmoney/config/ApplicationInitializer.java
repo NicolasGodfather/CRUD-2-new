@@ -30,7 +30,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
         ControllerResolver controllerResolver = getControllerResolver(applicationContext);
         registerDispatcherServlet(container, controllerResolver);
     }
-
+//add method task 18
     private ControllerResolver getControllerResolver(ApplicationContext applicationContext) {
         ControllerResolver controllerResolver = (ControllerResolver) applicationContext.getBean(CONTROLLER_RESOLVER);
         Map<String, Object> beansWithAnnotationController = applicationContext.getBeansWithAnnotation(Controller.class);

@@ -1,5 +1,6 @@
 package ru.itsphere.itmoney.servlets;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -15,8 +16,11 @@ import java.util.Map;
 @Component
 public class ClientRequest {
 
+    @Autowired
     private String action;
+    @Autowired
     private String controller;
+    @Autowired
     private Map<String, String> params;
 
     public ClientRequest(String action, String controller, Map<String, String> params) {

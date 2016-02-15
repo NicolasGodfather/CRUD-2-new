@@ -2,7 +2,7 @@ package ru.itsphere.itmoney.servlets;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 import ru.itsphere.itmoney.controllers.AbstractController;
 
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * @author Budnikov Aleksandr
  */
-@Controller
+@Component
 public class ControllerResolver {
     /**
      * Подключили логгер к текущему классу

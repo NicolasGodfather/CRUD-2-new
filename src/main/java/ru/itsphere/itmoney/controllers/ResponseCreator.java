@@ -2,6 +2,7 @@ package ru.itsphere.itmoney.controllers;
 
 import com.google.gson.JsonObject;
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
@@ -12,6 +13,7 @@ import java.io.Serializable;
  *
  * @author Budnikov Aleksandr
  */
+@Component
 public class ResponseCreator {
     public static final String OK_STATUS = "ok";
     public static final String FAIL_STATUS = "fail";
