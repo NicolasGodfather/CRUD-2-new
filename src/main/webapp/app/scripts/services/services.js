@@ -54,15 +54,15 @@ services.factory('User', function ($http, Config, ErrorHandler) {
             });
         },
 //add 16 task
-        findUsersByQuery : function (searchText, successCallback) {
+        findUsersByQuery : function (query, successCallback) {
             return $http.post(Config.appName, {
                 controller: "USER",
-                action: 'SEARCH_TEXT',
-                params: {id: id}
+                action: 'FIND_USERS_BY_QUERY',
+                params: {query: query}
             }).success(function (response) {
                 ErrorHandler(response, successCallback);
             });
-        },
+        }
     }
 });
 
