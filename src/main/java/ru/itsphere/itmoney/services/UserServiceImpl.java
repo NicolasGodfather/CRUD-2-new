@@ -80,6 +80,17 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public int getCount() {
+        try {
+
+            return userDAO.getAll().size();
+        } catch (Exception e){
+            throw new ServiceException("Getting count of users in list", e);
+        }
+
+    }
+
     public void setUserDAO(UserDAO userDAO) {
         this.userDAO = userDAO;
     }

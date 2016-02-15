@@ -37,7 +37,16 @@ public class UserController extends AbstractController {
         handlers.put(Actions.SAVE, save);
         handlers.put(Actions.GET_ALL, getAll);
         handlers.put(Actions.DELETE_BY_ID, deleteById);
+        handlers.put(Actions.GET_COUNT, getCount);
     }
+
+    private Executable getCount = (params -> {
+        try {
+            return wrap(userService.getCount());
+        } catch (Exception e) {
+            throw new ApplicationException("Action getCount has thrown exception", e);
+        }
+    });
 
     private Executable getById = (params) -> {
         try {

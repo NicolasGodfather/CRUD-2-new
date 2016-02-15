@@ -47,4 +47,10 @@ public interface UserService {
      * @param id идентификатор
      */
     void deleteById(int id);
+
+    /**
+     * Подсчитывает всех пользователей
+     *
+     */
+    int getCount();
 }
