@@ -14,8 +14,8 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
     <!--add-->
-    <context:property-placeholder location="classpath:configurations.properties" />
     <context:component-scan base-package="ru.itsphere.itmoney"/>
+    <context:property-placeholder location="classpath:configurations.properties" />
 
     <bean id="controllerResolver" class="ru.itsphere.itmoney.servlets.ControllerResolver">
         <property name="controllers">
@@ -24,5 +24,4 @@
             </map>
         </property>
     </bean>
-
 </beans>
