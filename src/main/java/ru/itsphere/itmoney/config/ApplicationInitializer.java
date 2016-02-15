@@ -2,6 +2,7 @@ package ru.itsphere.itmoney.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.WebApplicationInitializer;
 import ru.itsphere.itmoney.servlets.ControllerResolver;
 import ru.itsphere.itmoney.servlets.DispatcherServlet;
@@ -9,6 +10,7 @@ import ru.itsphere.itmoney.servlets.DispatcherServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
+import java.util.Map;
 
 /**
  * Этот класс инициализирует приложение
@@ -25,8 +27,15 @@ public class ApplicationInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext container) throws ServletException {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(CONTEXT_XML);
-        ControllerResolver controllerResolver = (ControllerResolver) applicationContext.getBean(CONTROLLER_RESOLVER);
+        ControllerResolver controllerResolver = getControllerResolver(applicationContext);
         registerDispatcherServlet(container, controllerResolver);
+    }
+
+    private ControllerResolver getControllerResolver(ApplicationContext applicationContext) {
+        ControllerResolver controllerResolver = (ControllerResolver) applicationContext.getBean(CONTROLLER_RESOLVER);
+        Map<String, Object> beansWithAnnotationController = applicationContext.getBeansWithAnnotation(Controller.class);
+        controllerResolver.setControllers(beansWithAnnotationController);
+        return controllerResolver;
     }
 
     /**

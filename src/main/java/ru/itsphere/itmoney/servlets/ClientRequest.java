@@ -1,6 +1,6 @@
 package ru.itsphere.itmoney.servlets;
 
-import ru.itsphere.itmoney.controllers.Controllers;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
@@ -11,7 +11,10 @@ import java.util.Map;
  *
  * @author Budnikov Aleksandr
  */
+
+@Component
 public class ClientRequest {
+
     private String action;
     private String controller;
     private Map<String, String> params;
@@ -23,11 +26,11 @@ public class ClientRequest {
     }
 
     public String getAction() {
-        return String.valueOf(action);
+        return action;
     }
 
-    public Controllers getController() {
-        return Controllers.valueOf(controller);
+    public String getController() {
+        return controller;
     }
 
     public Map<String, String> getParams() {
