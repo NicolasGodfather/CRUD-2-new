@@ -5,6 +5,7 @@ http://it-channel.ru/
 
 @author Budnikov Aleksandr
 -->
+<!--Заголовок страницы-->
 <h1 class="text-center">All users</h1>
 </br>
 <table class="table table-hover">
@@ -14,6 +15,7 @@ http://it-channel.ru/
         <th>Actions</th>
     </thead>
     <tbody>
+    <!--проитерирует список пользователей-->
         <tr ng-repeat="user in allUsers">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>

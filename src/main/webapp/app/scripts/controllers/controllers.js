@@ -31,7 +31,7 @@ itMoneyModule.controller('SaveUserController', function ($scope, $route, $locati
         return true;
     }
 });
-
+// основная задача - получить модель (Model) с сервера и правильно распорядиться этой информацией
 itMoneyModule.controller('AllUsersController', function ($scope, $location, User) {
     $scope.allUsers = [];
 
