@@ -220,6 +220,22 @@ public class UserDAOTextFileImpl implements UserDAO {
         }
     }
 
+    @Override
+    public int getCount() {
+//        try {
+//            List<User> result = new ArrayList<>();
+//            ListIterator<String> iterator = getLinesOfFile().listIterator(1);
+//            while (iterator.hasNext()) {
+//                result.add(convertToUser(iterator.next()));
+//            }
+//            return result.size();
+//        } catch (Exception e) {
+//            // TODO add code
+//            throw new DAOException("Getting count all users in list", e);
+//        }
+        return getAll().size();
+    }
+
     private boolean isMatchedQuery(String query, String userAsStringFromFile) {
         for (String attribute : userAsStringFromFile.split(SEPARATOR)) {
             if (attribute.contains(query)) {

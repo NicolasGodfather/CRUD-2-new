@@ -139,7 +139,6 @@ public class UserDAOTextFileImplTest {
         String actual = user.getId() + SEPARATOR + user.getName();
         String expected = USER_2_ID + SEPARATOR + USER_2_NAME;
         Assert.assertEquals("findUsersBuQuery isn't working", expected, actual);
-
     }
 
     @Test
@@ -147,7 +146,6 @@ public class UserDAOTextFileImplTest {
         List<User> users = userDAO.findUsersByQuery(USER_1_NAME + USER_2_NAME);
         Assert.assertTrue("Users isn't empty", users.isEmpty());
     }
-
 
     /**
      * Эти тест не удалять и не трогать!

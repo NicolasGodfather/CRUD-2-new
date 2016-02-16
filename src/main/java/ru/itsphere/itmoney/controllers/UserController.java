@@ -44,9 +44,8 @@ public class UserController extends AbstractController {
         }
     };
 
-    // task 1
+    // task 15
     public Serializable getCount(Map<String, String> params) {
-
         try {
             return wrap(userService.getCount());
         } catch (Exception e) {

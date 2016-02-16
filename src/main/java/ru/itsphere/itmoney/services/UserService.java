@@ -51,7 +51,6 @@ public interface UserService {
 
     /**
      * Подсчитывает всех пользователей
-     *
      */
     int getCount();
 

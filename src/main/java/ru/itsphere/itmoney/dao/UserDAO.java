@@ -56,4 +56,9 @@ public interface UserDAO {
      */
     List<User> findUsersByQuery(String query);
 
+    /**
+     * Подсчитывает всех пользователей
+     */
+    int getCount();
+
 }
