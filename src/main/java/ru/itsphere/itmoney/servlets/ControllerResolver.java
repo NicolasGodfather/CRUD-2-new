@@ -32,6 +32,7 @@ public class ControllerResolver {
         return controller;
     }
 
+
     public void setControllers(Map<String, Object> controllers) {
         this.controllers = controllers;
     }

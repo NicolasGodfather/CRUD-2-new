@@ -3,7 +3,6 @@ package ru.itsphere.itmoney.servlets;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.stereotype.Component;
 import ru.itsphere.itmoney.controllers.AbstractController;
 
 import javax.servlet.ServletException;
@@ -19,7 +18,7 @@ import java.io.IOException;
  *
  * @author Budnikov Aleksandr
  */
-@Component
+
 public class DispatcherServlet extends HttpServlet {
     /**
      * Подключили логгер к текущему классу
