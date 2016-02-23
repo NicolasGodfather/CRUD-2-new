@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.itsphere.itmoney.controllers.ResponseCreatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-16T12:03:53" hostname="Nicolas" time="0.032">
-  <properties/>
-  <testcase name="testProcessFail" classname="ru.itsphere.itmoney.controllers.ResponseCreatorTest" time="0.031"/>
-  <testcase name="testProcessWithResult" classname="ru.itsphere.itmoney.controllers.ResponseCreatorTest" time="0.001"/>
-  <testcase name="testProcessWithoutResult" classname="ru.itsphere.itmoney.controllers.ResponseCreatorTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
