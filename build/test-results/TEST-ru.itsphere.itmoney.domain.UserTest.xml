@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.itsphere.itmoney.domain.UserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-02-16T12:03:54" hostname="Nicolas" time="0.002">
+  <properties/>
+  <testcase name="testEqualsTrue1" classname="ru.itsphere.itmoney.domain.UserTest" time="0.0"/>
+  <testcase name="testEqualsTrue2" classname="ru.itsphere.itmoney.domain.UserTest" time="0.0"/>
+  <testcase name="testEqualsFalse1" classname="ru.itsphere.itmoney.domain.UserTest" time="0.0"/>
+  <testcase name="testEqualsFalse2" classname="ru.itsphere.itmoney.domain.UserTest" time="0.0"/>
+  <testcase name="testEqualsFalse3" classname="ru.itsphere.itmoney.domain.UserTest" time="0.001"/>
+  <testcase name="testHashCode" classname="ru.itsphere.itmoney.domain.UserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-02-11T08:58:36" hostname="Nicolas" time="0.028">
+  <properties/>
+  <testcase name="testDeleteByIdFail" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.011"/>
+  <testcase name="testGetAllEmpty" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.001"/>
+  <testcase name="testUpdateFail" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.0"/>
+  <testcase name="testUpdateSuccessfully" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.0"/>
+  <testcase name="testSaveSuccessfully" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.003"/>
+  <testcase name="testGetAllSuccessfully" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.0"/>
+  <testcase name="testDeleteByIdSuccessfully" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.0"/>
+  <testcase name="testGetByIdNotExistedUser" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.003"/>
+  <testcase name="testGetByIdExistedUser" classname="ru.itsphere.itmoney.dao.UserDAOHashMapImplTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
