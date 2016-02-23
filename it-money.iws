@@ -2,210 +2,209 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9898e9-12fd-4579-94d7-0f003fbd17d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/config/ApplicationInitializer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/AbstractController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/ApplicationException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/ResponseCreator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DAOException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DataReaderFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DataWriterFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/FileProperties.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/ReaderFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/UserDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/UserDAOTextFileImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/WriterFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/domain/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/ServiceException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/ClientRequest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/ControllerResolver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/DispatcherServlet.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/controllers/ResponseCreatorTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/controllers/UserControllerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataReaderFactory$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataReaderFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataWriterFactory$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataWriterFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/UserDAOTextFileImplTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/domain/UserTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/services/UserServiceImplTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1007288179432014054_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1023695961789768400_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1023775139062121999_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1083090684281274898_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1151773315508705195_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1198367981263430160_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_122614737371261862_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1299183217760620100_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1325677848508372798_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1387409432453805174_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1428826815397549726_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1461434729574673111_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1476030647231970587_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1558230188857309296_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_166587994094563367_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1740128655165005884_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1755625364417486960_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1804438333710360680_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_1896626255677555325_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2218151833586623108_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2249657652558894031_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2322177355364334040_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2378528040877558766_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2412128077301719874_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2527058226755761863_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2580047141563921125_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2724985005501588772_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_272882506064881232_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_275623245511623501_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2814689548588751357_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2860640181950244564_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_2896831622944015204_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_295119021001698581_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3027547444737195037_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3036622427084436820_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3084244702465757514_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3102771029127875974_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3222295384659315459_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3228625761363857616_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_349181335232038282_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3593633576188458800_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3665852146464765337_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3704926410506686399_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3765022340505355689_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3812500442327138857_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_3869998763505010363_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4001425632765947492_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4024704219770090637_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4146423204722485825_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4172342415861234685_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_428073283534383437_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4292373356008599157_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4306298575710552794_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4322963486233531400_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4370102053295485065_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4404061383374428888_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4471055317743988063_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4547380443646022988_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4639245619071499606_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4729038002445159663_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4738560132777153062_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4749511606026803611_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4833948082334698307_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_485550228412914556_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4928265139934182867_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_4972814344198839423_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5057070243641954689_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5081036792356881034_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5183390348013360748_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5268603638755219733_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5285724710192158486_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5319433839321694364_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5484992620796268199_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5653045253107000529_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5922492866129925850_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5952833986127841642_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5954475053771806438_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5963947763214086989_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5978612784204563884_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_5997536816175180531_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6059263943096484604_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6063104453946855663_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6102123049034786368_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6196626228555997538_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6301587349265572896_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6314744349117173651_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6329984864424089819_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6418708323843503507_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6490144243176123241_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6538901153787448356_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_6628869000524817463_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_69813108721907300_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7127965859929637580_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7175996651296716113_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7257825757796818158_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7259825483543494853_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7309571671095372696_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7327892410454207686_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7534161028482835801_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7556097061560163818_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7580578721861786239_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7621609122614179748_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7674183528641893318_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7689755191585765815_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7717368105949082339_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_780510780977622864_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_7857079842996921773_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8082840378592075875_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8105490954771130142_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8167879892746705654_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8237485641125471352_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8334776529685172320_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8335040272686044948_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8392883241762170389_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8596382235462816401_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8615108255076892897_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8656958914290667242_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8679733102923800886_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8728025414131927081_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8761769320896834729_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8802039724722367867_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8806712335211751072_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8850830355685333665_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8864887595222510651_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8906007075028003020_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8940738216939589175_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_8945297862446473285_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_9003016556281885315_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_9015767225474929032_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_9137772031630074708_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_92509468918880956_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/tmp/test/jar_extract_95064004031912471_tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/UserDAOHashMapImplTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.controllers.ResponseCreatorTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.controllers.UserControllerTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.dao.UserDAOHashMapImplTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.dao.UserDAOTextFileImplTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.domain.UserTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.services.UserServiceImplTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/css/base-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/js/report.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/packages/default-package.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.controllers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.dao.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.domain.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.services.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/resources/main/configurations.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/resources/main/context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/resources/main/log4j2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-UserDAOHashMapImplTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.controllers.ResponseCreatorTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.controllers.UserControllerTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.dao.UserDAOHashMapImplTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.dao.UserDAOTextFileImplTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.domain.UserTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.services.UserServiceImplTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/it-money.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/it-money.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/it-money.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output.log" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PROCFILE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/config/ApplicationInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/AbstractController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/ApplicationException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/ResponseCreator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/controllers/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DAOException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DataReaderFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/DataWriterFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/FileProperties.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/ReaderFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/UserDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/UserDAOTextFileImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/dao/WriterFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/domain/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/ServiceException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/services/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/ClientRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/ControllerResolver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ru/itsphere/itmoney/servlets/DispatcherServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/controllers/ResponseCreatorTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/controllers/UserControllerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataReaderFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataReaderFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataWriterFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/MockDataWriterFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/dao/UserDAOTextFileImplTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/domain/UserTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ru/itsphere/itmoney/services/UserServiceImplTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/UserDAOHashMapImplTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.controllers.ResponseCreatorTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.controllers.UserControllerTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.dao.UserDAOHashMapImplTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.dao.UserDAOTextFileImplTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.domain.UserTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/classes/ru.itsphere.itmoney.services.UserServiceImplTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/css/base-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/js/report.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/packages/default-package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.controllers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.dao.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.domain.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/packages/ru.itsphere.itmoney.services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/configurations.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/log4j2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-UserDAOHashMapImplTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.controllers.ResponseCreatorTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.controllers.UserControllerTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.dao.UserDAOHashMapImplTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.dao.UserDAOTextFileImplTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.domain.UserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/TEST-ru.itsphere.itmoney.services.UserServiceImplTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1007288179432014054_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1023695961789768400_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1023775139062121999_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1083090684281274898_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1151773315508705195_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1198367981263430160_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_122614737371261862_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1299183217760620100_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1325677848508372798_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1387409432453805174_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1428826815397549726_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1461434729574673111_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1476030647231970587_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1558230188857309296_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_166587994094563367_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1740128655165005884_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1755625364417486960_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1804438333710360680_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_1896626255677555325_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2218151833586623108_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2249657652558894031_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2322177355364334040_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2378528040877558766_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2412128077301719874_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2527058226755761863_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2580047141563921125_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2724985005501588772_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_272882506064881232_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_275623245511623501_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2814689548588751357_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2860640181950244564_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_2896831622944015204_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_295119021001698581_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3027547444737195037_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3036622427084436820_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3084244702465757514_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3102771029127875974_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3222295384659315459_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3228625761363857616_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_349181335232038282_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3593633576188458800_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3665852146464765337_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3704926410506686399_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3765022340505355689_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3812500442327138857_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_3869998763505010363_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4001425632765947492_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4024704219770090637_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4146423204722485825_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4172342415861234685_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_428073283534383437_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4292373356008599157_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4306298575710552794_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4322963486233531400_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4370102053295485065_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4404061383374428888_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4471055317743988063_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4547380443646022988_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4639245619071499606_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4729038002445159663_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4738560132777153062_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4749511606026803611_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4833948082334698307_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_485550228412914556_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4928265139934182867_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_4972814344198839423_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5057070243641954689_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5081036792356881034_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5183390348013360748_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5268603638755219733_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5285724710192158486_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5319433839321694364_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5484992620796268199_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5653045253107000529_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5922492866129925850_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5952833986127841642_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5954475053771806438_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5963947763214086989_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5978612784204563884_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_5997536816175180531_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6059263943096484604_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6063104453946855663_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6102123049034786368_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6196626228555997538_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6301587349265572896_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6314744349117173651_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6329984864424089819_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6418708323843503507_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6490144243176123241_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6538901153787448356_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_6628869000524817463_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_69813108721907300_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7127965859929637580_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7175996651296716113_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7257825757796818158_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7259825483543494853_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7309571671095372696_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7327892410454207686_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7534161028482835801_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7556097061560163818_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7580578721861786239_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7621609122614179748_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7674183528641893318_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7689755191585765815_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7717368105949082339_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_780510780977622864_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_7857079842996921773_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8082840378592075875_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8105490954771130142_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8167879892746705654_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8237485641125471352_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8334776529685172320_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8335040272686044948_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8392883241762170389_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8596382235462816401_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8615108255076892897_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8656958914290667242_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8679733102923800886_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8728025414131927081_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8761769320896834729_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8802039724722367867_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8806712335211751072_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8850830355685333665_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8864887595222510651_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8906007075028003020_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8940738216939589175_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_8945297862446473285_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_9003016556281885315_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_9015767225474929032_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_9137772031630074708_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_92509468918880956_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/test/jar_extract_95064004031912471_tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/it-money.ipr" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/it-money.iws" afterPath="$PROJECT_DIR$/it-money.iws" />
     </list>
-    <list id="2da9bcd7-6f71-4312-b451-0478c00aa183" name="Failed commit: Default" comment="Heroku-app - this is the END of the beginning =)&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PROCFILE" afterPath="$PROJECT_DIR$/Procfile" />
-    </list>
+    <list id="2da9bcd7-6f71-4312-b451-0478c00aa183" name="Failed commit: Default" comment="Heroku-app - this is the END of the beginning =)&#10;" />
     <ignored path="it-money.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -335,32 +334,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output.log">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38325283">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.030035336">
+                <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -379,7 +374,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="part_3" />
+        <entry key="$PROJECT_DIR$" value="part_4" />
       </map>
     </option>
   </component>
@@ -754,7 +749,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/UserDAOHashMapImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itsphere/itmoney/dao/UserDAOHashMapImpl.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itsphere/itmoney/dao/WriterFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/itsphere/itmoney/dao/MockDataReaderFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/itsphere/itmoney/dao/MockDataWriterFactory.java" />
@@ -788,6 +782,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/itsphere/itmoney/dao/UserDAOTextFileImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/itsphere/itmoney/services/UserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/itsphere/itmoney/controllers/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -878,6 +874,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1315,6 +1313,19 @@
       <option name="number" value="Default" />
       <updated>1454529030766</updated>
     </task>
+    <task id="LOCAL-00001" summary="Heroku-app - this is the END of the beginning =)&#10;">
+      <created>1456208653779</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1456208653779</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Training project is ready.">
+      <created>1456210710912</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1456210710912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1340,12 +1351,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.31432974" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.49768874" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.41230768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.5285054" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27382752" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.14843087" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1378,7 +1389,8 @@
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
     <MESSAGE value="Heroku-app - this is the END of the beginning =)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heroku-app - this is the END of the beginning =)&#10;" />
+    <MESSAGE value="Training project is ready." />
+    <option name="LAST_COMMIT_MESSAGE" value="Training project is ready." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1400,34 +1412,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.4/c6c78a38c0569503a5df2442dc3725f1b8b2efe8/log4j-api-2.4-sources.jar!/org/apache/logging/log4j/LogManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="444" column="25" selection-start-line="444" selection-start-column="25" selection-end-line="444" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17114094">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/configurations.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02733119">
@@ -1738,6 +1722,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1095008">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.030035336">
+            <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0547504">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itsphere/itmoney/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1748,26 +1786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.log">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38325283">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>

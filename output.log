@@ -720,3 +720,7 @@ Caused by: java.lang.NullPointerException
 15:03:54.518 [Test worker] WARN  ru.itsphere.itmoney.controllers.UserController - Action getById incoming param id is null
 15:03:54.551 [Test worker] WARN  ru.itsphere.itmoney.dao.UserDAOTextFileImpl - User with id '2' was not found
 15:03:54.620 [Test worker] WARN  ru.itsphere.itmoney.services.UserServiceImpl - User with id '2' was not found
+09:49:13.760 [http-bio-8080-exec-8] TRACE ru.itsphere.itmoney.controllers.AbstractController - entry params(ClientRequest{action='getCount', controller='userController', params=null})
+09:49:13.760 [http-bio-8080-exec-6] TRACE ru.itsphere.itmoney.controllers.AbstractController - entry params(ClientRequest{action='getAll', controller='userController', params=null})
+09:49:13.780 [http-bio-8080-exec-8] TRACE ru.itsphere.itmoney.controllers.AbstractController - exit with({"status":"ok","result":"6"})
+09:49:13.796 [http-bio-8080-exec-6] TRACE ru.itsphere.itmoney.controllers.AbstractController - exit with({"status":"ok","result":"[{\"id\":0,\"name\":\"Sasha\"},{\"id\":1,\"name\":\"Masha\"},{\"id\":2,\"name\":\"Ahmet\"},{\"id\":3,\"name\":\"Igor\"},{\"id\":4,\"name\":\"Паша\"},{\"id\":5,\"name\":\"цуацуа\"}]"})
