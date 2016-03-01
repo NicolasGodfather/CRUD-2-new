@@ -1,3 +1,10 @@
-# Created by .ignore support plugin (hsz.mobi)
-users.txt
-output.bin
+output.log
+.gradle
+!build.gradle
+!settings.gradle
+.gitignore
+it-money.iml
+it-money.ipr
+it-money.iws
+store
+README.md
