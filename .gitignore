@@ -1,0 +1,12 @@
+output.log
+.gradle
+!build.gradle
+!settings.gradle
+.gitignore
+it-money.iml
+it-money.ipr
+it-money.iws
+store
+README.md
+PROCFILE
+build
