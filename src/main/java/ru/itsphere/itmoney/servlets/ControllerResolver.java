@@ -9,10 +9,6 @@ import java.util.Map;
 
 /**
  * По clientRequest определяет какой контроллер должен обработать запрос
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 @Component
 public class ControllerResolver {

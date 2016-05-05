@@ -14,10 +14,6 @@ import java.util.Map;
 
 /**
  * Этот класс инициализирует приложение
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class ApplicationInitializer implements WebApplicationInitializer {
 

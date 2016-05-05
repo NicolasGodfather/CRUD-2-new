@@ -2,10 +2,6 @@ package ru.itsphere.itmoney.controllers;
 
 /**
  * Исключение приложения
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class ApplicationException extends RuntimeException {
     /**

@@ -4,10 +4,6 @@ import java.io.LineNumberReader;
 
 /**
  * Предоставляет объекты классов, которые используются для считывания из файла
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public interface ReaderFactory {
 

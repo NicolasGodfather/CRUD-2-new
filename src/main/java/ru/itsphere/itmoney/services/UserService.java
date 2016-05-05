@@ -6,10 +6,6 @@ import java.util.List;
 
 /**
  * Этот интерфейс содержит все бизнес операции связанные с классом User
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public interface UserService {
     /**

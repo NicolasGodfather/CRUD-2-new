@@ -13,10 +13,6 @@ import java.io.IOException;
 
 /**
  * Данный сервлет принимает POST запросы с клиента и перенаправлять их контролеру
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 
 public class DispatcherServlet extends HttpServlet {

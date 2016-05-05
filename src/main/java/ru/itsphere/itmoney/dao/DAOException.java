@@ -2,10 +2,6 @@ package ru.itsphere.itmoney.dao;
 
 /**
  * Исключение дао слоя
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class DAOException extends RuntimeException {
     /**

@@ -3,10 +3,6 @@
  *
  * И routes (urls) по которым будем определять какой контроллер будет обрабатывать
  * действия пользователя
- *
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 var iTMoneyModule = angular.module("ITMoney", ["ngRoute", 'ITMoney.services']);
 

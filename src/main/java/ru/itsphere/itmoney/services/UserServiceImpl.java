@@ -12,10 +12,6 @@ import java.util.List;
 
 /**
  * Реализация UserService
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 //add
 @Service

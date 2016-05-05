@@ -4,11 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * В этом классе тесты для класса "пользователь"
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
+ * Тесты для класса "пользователь"
  */
 public class UserTest {
 

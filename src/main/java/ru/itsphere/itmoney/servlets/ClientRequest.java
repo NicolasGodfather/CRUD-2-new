@@ -6,10 +6,6 @@ import java.util.Map;
 
 /**
  * Этот класс имитирует пользовательский запрос
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 
 public class ClientRequest {

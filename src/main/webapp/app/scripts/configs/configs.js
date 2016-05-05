@@ -1,9 +1,5 @@
 /**
  * Конфигурации клиентской части приложения
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 var configs = angular.module('ITMoney.configs', []);
 

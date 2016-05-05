@@ -9,10 +9,6 @@ import java.util.List;
 
 /**
  * Мок для тестирования UserDAOTextFileImpl
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class MockDataReaderFactory implements ReaderFactory {
 

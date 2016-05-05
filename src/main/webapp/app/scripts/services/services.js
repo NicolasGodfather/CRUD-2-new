@@ -1,9 +1,5 @@
 /**
  * Этот скрипт содержит кастомные сервисы
- *
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 var services = angular.module('ITMoney.services', ['ngResource', 'ITMoney.configs']);
 

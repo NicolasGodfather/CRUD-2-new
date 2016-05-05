@@ -7,10 +7,6 @@ import java.util.List;
 /**
  * Этот интерфейс содержит все элементарные операции связанные с классом User
  * Создание, чтение, добавление, удаление и т. д.
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public interface UserDAO {
     /**

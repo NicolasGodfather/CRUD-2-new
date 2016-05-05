@@ -8,11 +8,6 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-/**
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
- */
 @Component
 public class DataWriterFactory implements WriterFactory {
 

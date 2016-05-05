@@ -1,9 +1,5 @@
 /**
  * Этот скрипт содержит контроллеры клиентской части приложения
- *
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 var itMoneyModule = angular.module('ITMoney');
 
@@ -51,7 +47,6 @@ itMoneyModule.controller('AllUsersController', function ($scope, $location, User
             }
         });
     }
-
 
     getAllUsers();
     getUsersCount();

@@ -7,11 +7,6 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 
-/**
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
- */
 @Component
 public class DataReaderFactory implements ReaderFactory {
 

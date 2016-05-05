@@ -10,10 +10,6 @@ import java.util.Map;
 
 /**
  * Все контроллеры должны расширять этот класс
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public abstract class AbstractController {
     /**

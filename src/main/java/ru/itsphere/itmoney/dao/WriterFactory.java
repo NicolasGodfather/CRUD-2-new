@@ -4,10 +4,6 @@ import java.io.PrintWriter;
 
 /**
  * Предоставляет объекты классов, которые используются для записи в файла
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public interface WriterFactory {
     /**

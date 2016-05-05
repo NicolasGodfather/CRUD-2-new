@@ -8,10 +8,6 @@ import java.io.Serializable;
 
 /**
  * Этот класс нужен для создания ответов сервера по шаблон
- *
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 @Component
 public class ResponseCreator {

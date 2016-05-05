@@ -14,10 +14,6 @@ import java.util.Map;
 
 /**
  * Это класс контроллер для работы с пользователями он обрабатывает запросы DispatcherServlet
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 //add
 @Controller
@@ -33,9 +29,6 @@ public class UserController extends AbstractController {
     // task 16
     public Serializable findUsersByQuery(Map<String, String> params) {
         try {
-//            if (params.get("query").isEmpty()) {
-//                return null;
-//            }
             String query = String.valueOf(params.get("query"));
             return wrap(userService.findUsersByQuery(query));
         } catch (ServiceException e) {

@@ -7,10 +7,6 @@ import java.io.Serializable;
 
 /**
  * Тесты для ResponseCreator
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class ResponseCreatorTest {
 

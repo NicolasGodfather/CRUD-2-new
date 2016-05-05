@@ -15,10 +15,6 @@ import java.util.ListIterator;
 
 /**
  * Реализация UserDAO для работы через текстовый файл
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 @Component
 public class UserDAOTextFileImpl implements UserDAO {

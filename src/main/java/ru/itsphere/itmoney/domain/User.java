@@ -4,10 +4,6 @@ import java.util.Objects;
 
 /**
  * Абстракция. Пользователь
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class User {
     private int id;

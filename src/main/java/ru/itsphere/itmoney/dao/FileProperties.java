@@ -3,10 +3,6 @@ package ru.itsphere.itmoney.dao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by User on 15.02.2016.
- */
-
 @Component
 public class FileProperties {
 

@@ -23,10 +23,6 @@ import static org.mockito.Mockito.when;
 
 /**
  * Тесты для UserServiceImpl
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 @RunWith(MockitoJUnitRunner.class)
 public class UserServiceImplTest {

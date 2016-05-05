@@ -1,9 +1,5 @@
 package ru.itsphere.itmoney.controllers;
 
-/**
- * Created by User on 16.02.2016.
- */
-
 import com.google.gson.Gson;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,6 +16,10 @@ import java.util.*;
 
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.when;
+
+/**
+ * Тесты для UserController
+ */
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserControllerTest {

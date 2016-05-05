@@ -10,10 +10,6 @@ import java.util.List;
 
 /**
  * Тесты для UserDAOTextFileImpl
- * <p>
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 public class UserDAOTextFileImplTest {
     public static final String SEPARATOR = UserDAOTextFileImpl.SEPARATOR;

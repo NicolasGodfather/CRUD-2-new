@@ -1,9 +1,5 @@
 /**
  * Скрипт сборки проекта
- *
- * http://it-channel.ru/
- *
- * @author Budnikov Aleksandr
  */
 apply plugin: 'idea'
 
