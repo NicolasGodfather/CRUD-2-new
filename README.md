@@ -1,0 +1,1 @@
+Это учебный проект: клиент серверное-приложение. Технологии которые были применены в данном проекте: Java2EE, OOP, JSP, Servlets, DAO, TDD, JUnit, Mockito, JavaScript, XML, Git, Gradle, Tomcat, Log4j.
